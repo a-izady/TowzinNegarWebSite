@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<html class="k-@ViewBag.Theme" lang="fa">
+<head>
+    <title>@Html.Raw(ViewBag.Title)- توزین نگار</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="fa" />
+    <meta name="description" content="@Html.Raw(ViewBag.Meta)">
+    <meta name="keywords" content="  نرم افزار باسکول-نشاندهنده- باسکول- ترازو- نرم افزار- وزن- توزین-توزین الکتریک- توزین نگار-زمیک-فلینتک,کارا توزین-پلاک خوان-  - Bascule-Weighing- Towzinnegar-Weighing-Scale-Indicator-TEC1500-TEC1600- TEC800-TEC900-Loadcell- Loading-Gama-FarasooDeghat-Pand- Zemic- HM9- Jbox-Yaohua- A12-Flintec-KELI-Kara Towzin-Weighbridge-" />
+    <meta name="DC.title" content="نرم افزار باسکول توزین نگار" />
+    <meta name="DC.description" content="@Html.Raw(ViewBag.Meta)" />
+    <meta name="DC.subject" content="نرم افزار باسکول توزین نگار" />
+    <meta name="DC.source" content="https://www.towzinnegar.ir" />
+    <meta property="og:title" content="نرم افزار باسکول توزین نگار" />
+    <meta property="og:description" content="@Html.Raw(ViewBag.Meta)" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <link rel="shortcut icon" href="@Url.Content("~/favicon.ico")" />
+
+
+
+    @*@foreach (string styleName in Kendo.Mvc.Examples.Models.StyleGroups.All)
+        {
+            @Html.StyleLink(styleName, (string)ViewBag.Theme, (string)ViewBag.CommonFile)
+        }*@
+
+
+    <link href="/content/web/kendo.common.min.css" rel="stylesheet" />
+    <link href="/content/web/kendo.rtl.min.css" rel="stylesheet" />
+    <link href="/content/web/kendo.black.min.css" rel="stylesheet" />
+    @*<link href="/content/web/kendo.black.mobile.min.css" rel="stylesheet" />*@
+
+
+
+
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/kendo.all.min.js"></script>
+    <script src="~/Scripts/kendo.aspnetmvc.min.js"></script>
+
+
+
+
+
+
+    <link href="@Url.Content("~/content/shared/examples.css")" rel="stylesheet" />
+
+
+    @RenderSection("HeadContent", false)
+
+
+    <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        @@font-face {
+            font-family: 'YekanIzady';
+            src: url('../../fonts/BYekan.ttf') format('truetype');
+        }
+
+        .classname {
+            font-family: 'YekanIzady';
+        }
+    </style>
+
+
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXWFDW011S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XXWFDW011S');
+    </script>
+    <!-- Google Tag Manager -->
+    @*<script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TCZHH2Z');</script>*@
+    <!-- End Google Tag Manager -->
+    @Html.CanonicalUrl("www.towzinnegar.ir", "https");
+</head>
+
+<body style="background-color:darkgray">
+    <!-- Google Tag Manager (noscript) -->
+    @*<noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCZHH2Z"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>*@
+    <!-- End Google Tag Manager (noscript) -->
+
+
+
+    @{
+
+        if (ViewBag.BannerBool != null)
+        {
+            if (ViewBag.BannerBool)
+            {
+                <div id="megaStore2" class="k-rtl k-content" style="font-family:YekanIzady;">
+                </div>
+            }
+        }
+    }
+
+    <div id="megaStore" class="k-rtl k-content" style="font-family:YekanIzady;">
+
+        @(Html.Kendo().Menu()
+        .Name("Menu")
+           .Items(items =>
+           {
+           items.Add().ImageUrl("~/Content/web/32x32/Chart.png").Action("Index", "Home").Text("");
+           items.Add().Text(@Kendo.Mvc.Examples.App_GlobalResources.Resource.menu1).Action("Index", "Home")
+                 .Content(@<text>
+                         <a href="~/" style="color:aqua" >
+                             <h2 onclick='window.location = "@Url.Action("Index", "Home")";'>برنامه باسکول توزین نگار</h2>
+                             <ol onclick='window.location = "@Url.Action("Index", "Home")";'>
+                                 <li onclick='window.location = "@Url.Action("Index", "Home")";'>دریافت وزن بدون دخالت کاربر</li>
+                                 <li onclick='window.location = "@Url.Action("Index", "Home")";'>گزارش گیری متنوع</li>
+                                 <li onclick='window.location = "@Url.Action("Index", "Home")";'>MicroSoft DotNet Frame Work</li>
+                                 <li onclick='window.location = "@Url.Action("Index", "Home")";'>دیتابیس اس کیو ال سرور</li>
+                             </ol>
+                             <img onclick='window.location = "@Url.Action("Index", "Home")";' src='@Url.Content("~/Content/web/menu/Bascule_Software.jpg")' alt="Stores Around the Globe" />
+                             @*<button class="k-button" style="background-color:aqua" onclick='window.location = "@Url.Action("Index", "Home")";'>صفحه اصلی</button>*@
+                         </a>
+                </text>);
+               items.Add()
+               .Text(@Kendo.Mvc.Examples.App_GlobalResources.Resource.menu2)
+               .Items(children =>
+               {
+                   children.Add().Text("نرم افزار باسکول توزین نگار").Action("توزین-نگار", "Home");
+                   children.Add().Text("دانلود کاتالوگ برنامه توزین نگار").Url("~/Content/shared/images/TowzinNegar/TowzinNegar.pdf").LinkHtmlAttributes(new { target = "_blank" });
+                   children.Add().Text("لیست مشتریان توزین نگار").Action("CustomerList", "Home");
+                   children.Add().Text("دانلود برنامه باسکول").Action("دانلود-رایگان-نرم-افزار-باسکول", "Home");
+                   children.Add().Text("اس ام اس").Action("SMS", "Home");
+                   children.Add().Text("ترمینال پورت سریال").Url("https://towzinnegar.ir/Home/rs232Terminal").LinkHtmlAttributes(new { target = "_blank" });
+                   //children.Add().Text("اتصال باسکول به حسابداری هلو").Action("حسابداری-هلو-باسکول", "Home");
+                   children.Add().Text("بارنامه بتن").Action("بارنامه-بتن", "Home");
+                   children.Add().Text("نرم افزار باسکول کفی باسکولت").Action("نرم-افزار-باسکول-کفی-باسکولت", "Home");
+                   children.Add().Text("گزارش گیری تحت وب").Action("گزارش-گیری-تحت-وب", "Home");
+                   children.Add().Text("آموزش").Action("آموزش", "Home");
+                   children.Add().Text("پنل اس ام اس").Url("http://sms.towzinnegar.ir/client/membership/login?").LinkHtmlAttributes(new { target = "_blank" });
+               });
+
+
+               items.Add().Text(@Kendo.Mvc.Examples.App_GlobalResources.Resource.menu3)
+               .Items(children =>
+               {
+                   children.Add().Text("نشاندهنده Keli T1").Action("keliХК3118Т1", "Home");
+                   children.Add().Text("باسکولت لیبل زن").Action("توزین-لیبل-پرینتر", "Home");
+                   children.Add().Text("نشاندهنده yaohua A23-p").Action("IndicatorA23P", "Home");
+                   children.Add().Text("نشاندهنده باسکول ").Action("نشاندهنده-باسکول", "Home");
+                   children.Add().Text("لودسل").Action("لودسل", "Home");
+                   children.Add().Text("جانکشن باکس لودسل").Action("جانکشن-باکس-لودسل", "Home");
+                   children.Add().Text("باسکول جاده ای").Action("باسکول-جاده-ای", "Home");
+                   //children.Add().Text("کالیبراسیون دوره ای باسکول").Action("کالیبراسیون-باسکول", "Home");
+                   children.Add().Text("نمایشگر ثانویه باسکول").Action("نمایشگر-ثانویه-باسکول", "Home");
+                   children.Add().Text("مبدل usb به سریال").Action("مبدل-یو-اس-بی-به-سریال-امگا", "Home");
+                   children.Add().Text("فروشگاه آنلاین").Url("https://store.towzinnegar.ir/").LinkHtmlAttributes(new { target = "_blank" });
+               });
+               items.Add().Text(@Kendo.Mvc.Examples.App_GlobalResources.Resource.menu4)
+               .Items(children =>
+               {
+                   children.Add().Text("مانیتورینگ تحت وب").Action("WebAutomation", "Home");
+                   children.Add().Text("طراحی سایت").Action("SiteDesign", "Home");
+                   children.Add().Text("ترمینال پورت سریال ").Url("https://towzinnegar.ir/Home/rs232Terminal").LinkHtmlAttributes(new { target = "_blank" });
+                   children.Add().Text("برنامه باسکول تحت وب").Url("https://app.towzinnegar.ir").LinkHtmlAttributes(new { target = "_blank" });
+
+               });
+
+               items.Add().Text(@Kendo.Mvc.Examples.App_GlobalResources.Resource.menu5).Action("ContactUs", "Home");
+               items.Add().Text(@Kendo.Mvc.Examples.App_GlobalResources.Resource.Menu)
+                    .Items(children =>
+                    {
+                        foreach (var i in Kendo.Mvc.Examples.Models.LanguageMang.AvailableLanguages)
+                        {
+                            children.Add().Text(i.LanguageFullName).Action("ChangeLanguage", "Home", new { lang = i.LanguageCultureName });
+                        }
+                    });
+           })
+        )
+
+
+    </div>
+
+    <style>
+
+  #megaStore2 {
+        max-width: 100%;
+        margin: 0px;
+        padding-top: 33vw; /*400px;*/
+        background: url(@Url.Content("~/Content/shared/images/TowzinNegar/banner5.webp")) no-repeat center 0 ;
+        background: url(@Url.Content("~/Content/shared/images/TowzinNegar/banner5.png")) no-repeat center 0 ;
+        background-size: contain;
+        font-size:/*1.7vw;*/10px;
+        
+    }
+
+
+    #megaStore {
+        max-width: 100%;
+        margin:  0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        font-size:21px;
+    }
+#Menu h2 {
+        font-size: 1em;
+        text-transform: uppercase;
+        padding: 5px 10px;
+    }
+
+#template img {
+        margin: 5px 20px 0 0;
+        float: left;
+    }
+#template {
+        width: 380px;
+    }
+    #template ol {
+        float: left;
+        margin: 0 0 0 30px;
+        padding: 10px 10px 0 10px;
+    }
+    #template:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+    #template .k-button {
+        float: left;
+        clear: left;
+        margin: 5px 0 5px 12px;
+    }
+    #Menu .k-item>.k-link {
+    padding-left: 3vw;
+    padding-right: 0.5em;
+}
+
+    </style>
+    @*<script>
+        var sideMenu = false;
+
+        function show_more_menu(e) {
+            e.preventDefault();
+            var itemSchema = document.getElementById("Menu");
+            var megaStore2a = document.getElementById("megaStore");
+            if (sideMenu) {
+                $("#Menu").kendoMenu({
+                    orientation: "Horizontal"
+                });
+                itemSchema.style.display = "none";
+                megaStore2a.style.maxWidth = "100%";
+                sideMenu = false;
+            } else {
+                $("#Menu").kendoMenu({
+                    orientation: "vertical"
+                });
+                itemSchema.style.display = "inline-block";
+                megaStore2a.style.maxWidth = "30%";
+                sideMenu = true;
+            }
+        }
+
+
+        document.getElementsByTagName("BODY")[0].onresize = function () { myFunction() };
+        document.getElementsByTagName("BODY")[0].onload = function () { myFunction() };
+
+
+        function myFunction() {
+            var w = window.innerWidth;
+            var itemSchema = document.getElementById("Menu");
+            var sidebartoggle = document.getElementById("sidebar-toggle");
+            var megaStore2a = document.getElementById("megaStore");
+            if (w < 700) {
+                sidebartoggle.style.visibility = "visible";
+                itemSchema.style.display = "none";
+            } else {
+                sidebartoggle.style.visibility = "hidden";
+                itemSchema.style.display = "flex";
+                megaStore2a.style.maxWidth = "100%";
+            }
+        }
+
+    </script>*@
+
+
+    @RenderBody()
+</body>
+</html>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap>
+  <siteMapNode title="نرم افزار باسکول توزین نگار" controller="Home" action="TowzinNegar">
+    <siteMapNode title="Menu">
+      <siteMapNode controller="Home" action="index" title="صفحه اصلی" />
+      <siteMapNode controller="Home" action="ContactUs" title="ارتباط با ما" />
+      <siteMapNode controller="Home" action="DownloadTN" title="دانلود نرم افزار باسکول توزین نگار" />
+      <siteMapNode controller="Home" action="IndicatorA23P" title="نشاندهنده" />
+      <siteMapNode controller="Home" action="WebAutomation" title="طراحی سایت" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

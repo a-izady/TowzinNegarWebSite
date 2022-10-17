@@ -1,0 +1,150 @@
+﻿
+@{
+    ViewBag.Title = "به سریال امگا usb مبدل";
+    Layout = "~/Views/Shared/ExampleLayout2.cshtml";
+    ViewBag.Meta = "مبدل یو اس بی به سریال";
+}
+
+        <style>
+            table {
+                font-family: YekanIzady;
+                border-collapse: collapse;
+                width: 80%;
+            }
+
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: center;
+                padding: 8px;
+            }
+     
+        </style>
+
+<style>
+    p {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    h4 {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    h3 {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    h1 {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    ul {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+</style>
+
+
+<div class="k-content k-rtl center-block" style="font-family: YekanIzady; width: 60%;min-width:400px;max-width:100%;">
+
+    <br />
+    <h2 style="text-align:center"> کابل تبدیل USB به سریال RS232 امگا</h2>
+    <br />
+    <img src="~/Content/shared/images/TowzinNegar/usb-to-serial-converter.png" style="max-width:40vw;max-height:20vw;" class="center-block" alt="usb to serial converter" />
+    <br />
+    <p style="text-align:center">USR2309 USB Type A Male To RS232 DB 9 Pin Male</p>
+    <p style="text-align:center">مناسب جهت اتصال انواع نشاندهنده های باسکول و سیستم های توزین به کامپیوتر و استفاده از برنامه باسکول توزین نگار</p>
+    <br />
+    <img src="~/Content/shared/images/TowzinNegar/USB-to-Serial-Adapter-omega.png" style="max-width:40vw;max-height:20vw;" class="center-block" alt="مبدل یو اس بی به سریال امگا" />
+    <br />
+    <h1 style="text-align:center;">درگاه Serial چیست؟</h1>
+    <br />
+    <p class="text-justify" style="margin-left:40px;margin-right:40px;">
+        درگاه Serial یک درگاه استاندارد برای اتصال انواع دستگاه‌های ورودی (Input Device) از جمله کیبورد، ماوس، پرینترها است البته این درگاه فقط مختص ارتباط با مودم‌ها (Modems) ساخته شده بود که بعدها برای ارتباط با سایر دستگاه‌ها(نشاندهنده باسکول، پی ال سی و ...) نیز مورد استفاده قرار گرفت.
+
+        دستگاه‌ها و سخت افزارهایی که از استاندارد RS-232 برای برقراری ارتباط استفاده می‌کنند، می‌توانند با استفاده از درگاه Serial با سایر دستگاه‌ها ارتباط برقرار کنند.
+
+        این درگاه دارای ۹  پین است (DB-9) و سرعت انتقال داده از آن حدوداً بین ۱۲۰۰ تا ۱۱۵۲۰۰ بیت بر ثانیه (bps) است که البته پس از ارسال بیت‌های داده، یک بیت نیز به عنوان نشانگر انتهای بیت‌های قبلی ارسال می‌شود.
+
+        ولتاژ +۳ تا +۱۲ برای مشخص کردن بیت صفر و ولتاژ -۳ تا -۱۲ برای مشخص کردن بیت یک است. به این ترتیب درگاه Serial بیت‌ها را ارسال یا دریافت می‌کند. این درگاه برخلاف سایر پورت‌های دیگر معمولاً به صورت نری بر روی مادربرد قرار می‌گیرد.
+    </p>
+    <br />
+    <h2 style="text-align:center">اطلاعات پین‌ها (Pin Out) کانکتور 9 پین پورت سریال:</h2>
+    <br />
+    <img src="~/Content/shared/images/TowzinNegar/commport_pinout.png" style="max-width:40vw;max-height:20vw;" class="center-block" alt="commport _pinout" />
+    <br />
+    <table style="height: 290px; width:700px;">
+        <tbody>
+            <tr>
+                <td>شماره پین</td>
+                <td>نام پین</td>
+                <td>توضیحات</td>
+                <td>کاربرد در مودم</td>
+            </tr>
+            <tr>
+                <td>۱</td>
+                <td>DCD</td>
+                <td>تشخیص حامل داده‌ها</td>
+                <td>این پین برای تشخیص اتصال مودم به کار می‌رود.</td>
+            </tr>
+            <tr>
+                <td>۲</td>
+                <td>RxD</td>
+                <td>دریافت داده‌ها</td>
+                <td>دریافت داده‌ها از طرف مودم</td>
+            </tr>
+            <tr>
+                <td>۳</td>
+                <td>TxD</td>
+                <td>ارسال داده‌ها</td>
+                <td>این پین برای ارسال داده‌ها به مودم استفاده می‌شود.</td>
+            </tr>
+            <tr>
+                <td>۴</td>
+                <td>DTR</td>
+                <td>آمادگی پایانه داده‌ها</td>
+                <td>این پین برای مطلع کردن آمادگی دستگاه برای انتقال داده استفاده می‌شود.</td>
+            </tr>
+            <tr>
+                <td>۵</td>
+                <td>GND</td>
+                <td>GND</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>۶</td>
+                <td>DSR</td>
+                <td>آمادگی مجموعه داده‌ها</td>
+                <td>این پین نیز برای مطلع کردن آمادگی دستگاه برای انتقال داده استفاده می‌شود.</td>
+            </tr>
+            <tr>
+                <td>۷</td>
+                <td>RTS</td>
+                <td>درخواست ارسال</td>
+                <td>این پین بر روی مودم و کامپیوتر انتقال داده‌ها را کنترل می‌کند.</td>
+            </tr>
+            <tr>
+                <td>۸</td>
+                <td>CTS</td>
+                <td>اتمام ارسال</td>
+                <td>این پین نیز بر روی مودم و کامپیوتر انتقال داده‌ها را کنترل می‌کند.</td>
+            </tr>
+            <tr>
+                <td>۹</td>
+                <td>RI</td>
+                <td>برقراری تماس از طریق خط تلفن</td>
+                <td>این پین برای برقراری تماس مودم از طریق خط تلفن به اینترنت استفاده می‌شود.</td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    <div>
+        <h2 style="font-family:YekanIzady;">سیم بندی کابل ارتباط سریال نشاندهنده باسکول به کامپیوتر</h2>
+        <br />
+        <img src="~/Content/shared/images/TowzinNegar/Rs232Cable.jpeg" style="max-width:40vw;max-height:20vw;" class="center-block" alt="r3232 null modem" />
+        <br />
+    </div>
+</div>

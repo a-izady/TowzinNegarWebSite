@@ -1,0 +1,140 @@
+﻿<Page EnableSessionState="False"></Page>
+<sessionState mode="Off" />
+
+@{
+    ViewBag.Title = "نرم افزار باسکول توزین نگار";
+    ViewBag.Meta = "نرم افزار رایگان باسکول توزین نگار";
+    Layout = "~/Views/Shared/ExampleLayout2.cshtml";
+}
+
+
+
+
+
+
+
+<div class="k-content k-rtl center-block" style="font-family:YekanIzady;width:70%;min-width:400px;max-width:100%;">
+    <br />
+    <h1 style="text-align:center;">•    معرفی نرم افزار باسکول توزین نگار</h1>
+    <img class="center-block" style="max-width:40vw;max-height:20vw;" title="TowzinNegar" src="~/Content/shared/images/TowzinNegar/WeighBridgeSclePCSoft.png" alt="Weighbridge scale pc software" />
+
+    <p style="text-align: center;margin-left:20px;margin-right:20px;">
+        <br />
+        <br />بعلت محدودیت هایی که در نشاندهنده های اوزان وجود دارد و مشکلاتی که این محدودیت ها برای باسکول داران کشور ایجاد نموده است ، شرکت توزین نگار با استفاده از کادر مجرب ، متشکل از نرم افزارنویسان خبره ، اقدام به طراحی نرم افزار های کامپیوتری باسکول نموده است .
+        <br />از جمله محدو دیتهای موجود در نشان دهنده های باسکول(Indicator) میتوان به حافظه محدود ، پشتیبانی از پرینترهای خاص ( معمولا فقط سوزنی ) ، گزارشگیری ناکارمد ،فیلدهای ناکافی ،هزینه تعمیرات بالا، نداشتن قابلیت شبکه ، حجم حافظه محدود، عدم پشتیبانی از زبان فارسی در نشاندهنده های خارجی و ... اشاره نمود.
+        <br />در صورت استفاده از برنامه های کامپیوتری تمام مشکلات که در بالا ذکر شده مرتفع می گردد .
+        <br />
+        <br />ویژگی های نرم افزار باسکول توزین نگار :
+        <br />• دریافت وزن بدون دخالت اپراتور
+        <br />• قابلیت اتصال دو نشاندهنده به یک نرم افزار
+        <br />• استفاده از کلید های میانبر در تمام عملیات توزین
+        <br />• دارای فیلدهای متعدد از جمله نوع کالا ، بارنامه ، هزینه توزین، مبدا، مقصد،مشتری،اپراتور و ...
+        <br />• محاسبه قیمت کل کالا
+        <br />• استفاده از دیتا بیس پر قدرت مایکروسافت اس کیو ال سرور
+        <br />• گزارش گیری ترکیبی بر حسب تاریخ ، شماره ماشین ، سریال،کالا، بارنامه و ...
+        <br />• ایجاد اپراتورهای مختلف بهمراه رمز
+        <br />• ویرایش اطلاعات ورودی در صورت بروز اشتباه
+        <br />•    محاسبه قیمت کالا با استفاده از فی
+        <br />•    محاسبه مالیات بر ارزش افزوده
+        <br />• قابلیت Export کردن گزارش ها به نرم افزار اکسل
+        <br />• توانایی کار با انواع پرینتر های موجود در بازار USB and Parallel
+        <br />• قابلیت ارتباط با Relay Box برای اتصال به چراغ راهنمایی و گیت ورودی / خروجی
+        <br />• قابلیت اضافه کردن خروجی 4 to 20 mA برای اتصال به PLC
+        <br />• طراحی قبض باسکول دلخواه مشتری یا پر کردن قبض چاپ شده مشتری
+        <br />• ورود شماره کامیون با استفاده از Card Reader
+        <br />• قابلیت اتصال به پرینترهای لیبل زن
+        <br />• شبکه کردن تعداد نا محدودی باسکول
+        <br />• استفاده از دیتابیس پرقدرت Microsoft SQL Server
+        <br />• قابلیت چاپ بارنامه بتن
+        <br />• قابلیت سفارشی اتصال به نرم افزار حسابداری هلو
+        <br />• قابلیت سفارشی اتصال به نرم افزار انبار داری نوسا
+        <br />• قابلیت سفارشی اتصال به نرم افزار حسابداری رافع7
+        <br />• قابلیت پلاک خوان بهمراه چاپ عکس پلاک بر روی قبض باسکول
+        <br />• برنامه مخصوص باسکولت
+        <br />• ارسال توزین به کانال تلگرام
+        <br />• پشتیبانی 24 ساعته
+        <br />• نصب شده در کلیه نقاط ایران
+
+    </p>
+  
+    <br />
+</div>
+<p></p>
+<div class="container" id="example" style="margin:auto; width:70%;min-width:400px;max-width:100%;">
+    @(Html.Kendo().ScrollView()
+        .Name("scrollView")
+        .ContentHeight("100%")
+        .Duration(2000)
+        .Items(x =>
+        {
+            x.Add().Content("<div class='photo photo1'></div>");
+            x.Add().Content("<div class='photo photo2'></div>");
+            x.Add().Content("<div class='photo photo3'></div>");
+            x.Add().Content("<div class='photo photo4'></div>");
+            x.Add().Content("<div class='photo photo5'></div>");
+            x.Add().Content("<div class='photo photo6'></div>");
+            x.Add().Content("<div class='photo photo7'></div>");
+            x.Add().Content("<div class='photo photo8'></div>");
+            x.Add().Content("<div class='photo photo9'></div>");
+            x.Add().Content("<div class='photo photo10'></div>");
+        }
+        )
+        .HtmlAttributes(new { style = "height:50vw; width:1022px; max-width: 100%"/*"height:748px; width:1022px; max-width: 100%"*/ })
+    )
+</div>
+
+
+    <style>
+
+    .photo {
+        display: inline-block;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width:inherit;
+        height:inherit;
+    }
+
+    .photo1 {
+        background-image: url("@Url.Content("~/content/shared/images/TowzinNegar/002.jpg")");
+    }
+
+    .photo2 {
+        background-image: url("@Url.Content("~/content/shared/images/TowzinNegar/003.jpg")");
+    }
+
+    .photo3 {
+       background-image: url("@Url.Content("~/content/shared/images/TowzinNegar/004.png")");
+    }
+
+    .photo4 {
+        background-image: url("@Url.Content("~/content/shared/images/TowzinNegar/005.png")");
+    }
+
+    .photo5 {
+        background-image: url("@Url.Content("~/content/shared/images/TowzinNegar/008.jpg")");
+    }
+
+    .photo6 {
+        background-image: url("@Url.Content("~/content/shared/images/TowzinNegar/007.jpg")");
+    }
+
+    .photo7 {
+        background-image: url("@Url.Content("~/content/shared/images/TowzinNegar/006.jpg")");
+    }
+
+    .photo8 {
+        background-image: url("@Url.Content("~/content/shared/images/TowzinNegar/009.jpg")");
+    }
+
+    .photo9 {
+        background-image: url("@Url.Content("~/content/shared/images/TowzinNegar/010.jpg")");
+    }
+
+    .photo10 {
+        background-image: url("@Url.Content("~/content/shared/images/TowzinNegar/013.jpg")");
+    }
+    </style>
+
+
+

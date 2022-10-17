@@ -1,0 +1,92 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout3.cshtml";
+}
+@section HeadContent {
+    @RenderSection("HeadContent", false)
+}
+<script>
+    window.kendoTheme = "@ViewBag.Theme";
+    window.kendoCommonFile = "@ViewBag.CommonFile";
+</script>
+
+@*<script src="@Url.Content("~/Scripts/theme-chooser.js")"></script>*@
+
+<div id="main-wrap">
+ 
+    <div id="main">
+         <a href="#" onclick="show_more_menu(event)"  id="sidebar-toggle" style="display:normal" ><span></span></a>
+
+        @*@Html.Partial("ThemeChooser2")*@
+
+    
+        <div id="exampleWrap">
+            <script>$("#exampleWrap").css("visibility", "hidden");</script>
+
+            @{
+                <div id="example">
+                    @RenderBody()
+                </div>
+
+                if (ViewBag.Description != null)
+                    {
+                        <div class="box demo-description wide">
+                            <h4>Description</h4>
+                            @Html.Raw(ViewBag.Description)
+                        </div>
+                    }
+            }
+            <script>
+                    $(function(){ $("#exampleWrap").css("visibility", ""); });
+                </script>
+        </div>
+
+
+
+  
+
+        @if (ViewBag.ShowCodeStrip == true)
+        {
+
+            <div id="wrappers-source-code">
+              
+
+         
+
+            </div>
+
+            <div id="codeStrip">
+                <div class="buttons-wrap">
+                    @if (!string.IsNullOrEmpty(ViewBag.Api))
+                    {
+                        <a class="documentation-link k-link" href="@ViewBag.Api">API Reference</a>
+                    }
+
+                    @{
+                        IEnumerable<ExampleFile> examples = ViewBag.ExampleFiles;
+                    }
+                </div>
+
+    
+            </div>
+        }
+        <div id="resources-technologies" class="box" style="text-align:center">
+            <small style="font-family:YekanIzady">کليه حقوق اين سايت متعلق به شرکت توزین نگار مي‌باشد </small>
+     
+
+
+            <div id="technologies" class="box-col">
+
+
+       
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(window).on("resize", function() {
+      kendo.resize($(".k-chart"));
+    });
+
+    //setTimeout(function(){ prettyPrint(); }, 100);
+</script>
